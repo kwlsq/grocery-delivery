@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sf-pro-display">{children}</body>
+      <body className="font-sf-pro-display flex justify-center bg-gray-100">{children}</body>
     </html>
   );
 }

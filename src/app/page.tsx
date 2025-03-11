@@ -1,5 +1,9 @@
+import MobileWrapper from "./components/MobileWrapper";
+
 export default function Home() {
   return (
-    <div>Hi</div>
+    <MobileWrapper>
+      <div>Hi</div>
+    </MobileWrapper>
   );
 }
