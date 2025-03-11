@@ -5,11 +5,27 @@
   --foreground: #171717; */
 }
 
+@layer {
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
 @theme {
-  /* --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
+  --color-white: #fff;
+  --color-black: #000000;
+  --color-grey: #f9f8f6;
+  --color-mint: #66d4b3;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -20,7 +36,6 @@
 } */
 
 body {
-  /* background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif; */
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 16px;
 }
