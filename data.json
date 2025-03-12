@@ -33,7 +33,7 @@
       "weight": 1300,
       "name": "Cucumber",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/cucumber.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -101,7 +101,7 @@
       "weight": 1000,
       "name": "Fresh Garlic",
       "category": "Spicy",
-      "imageUrl": "/products/garlic.png",
+      "imageUrl": "/products/garlic.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
