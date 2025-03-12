@@ -6,7 +6,6 @@ import { useProductContext } from "@/context/productContext";
 const CategoryNavigation = () => {
   const { categoryList } = useProductContext();
   const { activeCategory, setActiveCategory } = useCategoryContext();
-  console.log(activeCategory);
 
   const isAllCategorySelected = activeCategory === "*";
   const baseCategoryClassname = `w-full whitespace-nowrap hover:cursor-pointer`;
