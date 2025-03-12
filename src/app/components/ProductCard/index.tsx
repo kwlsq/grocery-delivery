@@ -20,12 +20,12 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
       </div>
 
       <div>
-        <div className="font-semibold text-2xl">${product.price}</div>
+        <div className="font-semibold text-2xl">${product.price*1000}</div>
         <div>{product.name}</div>
       </div>
 
       <div className="flex justify-between items-center">
-        <div className="opacity-35">{product.weight} gr</div>
+        <div className="opacity-35">{product.weight/1000} kg</div>
         <button className="border border-[#b8b7b5] rounded-full w-10 h-10 flex justify-center items-center">
           <Image
             height={100}
