@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ProductProvider } from "@/context/productContext";
+import { CategoryProvider } from "@/context/categoryContext";
 
 export const metadata: Metadata = {
   title: "Grocery Delivery",
@@ -15,9 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ProductProvider>
-        <body className="font-sf-pro-display flex justify-center bg-gray-100">
-          {children}
-        </body>
+        <CategoryProvider>
+          <body className="font-sf-pro-display flex justify-center bg-gray-100">
+            {children}
+          </body>
+        </CategoryProvider>
       </ProductProvider>
     </html>
   );
