@@ -9,13 +9,13 @@ interface ProductCardProps {
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
     <div className="bg-grey rounded-xl p-3 flex flex-col h-[242px] justify-between">
-      <div className="w-full h-[113px] flex justify-center items-center ">
+      <div className="w-full h-[113px] flex justify-center items-center">
         <Image
           height={100}
           width={100}
           alt={`picture of product ${product.name}`}
           src={product.imageUrl}
-          className="object-contain"
+          className="object-contain w-full max-h-28"
         />
       </div>
 

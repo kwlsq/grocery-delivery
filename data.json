@@ -16,7 +16,7 @@
       "weight": 1000,
       "name": "Beetles",
       "category": "Exotic",
-      "imageUrl": "/products/beetles.png",
+      "imageUrl": "/products/beetles.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -50,7 +50,7 @@
       "weight": 1200,
       "name": "White Onion",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/white-onion.png",
+      "imageUrl": "/products/white-onion.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -67,7 +67,7 @@
       "weight": 1500,
       "name": "Lemon",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/lemon.png",
+      "imageUrl": "/products/lemon.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -84,7 +84,7 @@
       "weight": 2000,
       "name": "Potato",
       "category": "Roots",
-      "imageUrl": "/products/potato.png",
+      "imageUrl": "/products/potato.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -118,7 +118,7 @@
       "weight": 500,
       "name": "Red Chili Pepper",
       "category": "Spicy",
-      "imageUrl": "/products/potato.png",
+      "imageUrl": "/products/red-chilli.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -135,7 +135,7 @@
       "weight": 750,
       "name": "Ranch Dressing",
       "category": "Dressings",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/agave.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -152,7 +152,7 @@
       "weight": 1000,
       "name": "Honey",
       "category": "Sweet",
-      "imageUrl": "/products/lemon.png",
+      "imageUrl": "/products/honey.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -169,7 +169,7 @@
       "weight": 2000,
       "name": "Carrot",
       "category": "Roots",
-      "imageUrl": "/products/tomato.png",
+      "imageUrl": "/products/carrot.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -186,7 +186,7 @@
       "weight": 1500,
       "name": "Beetroot",
       "category": "Roots",
-      "imageUrl": "/products/beetles.png",
+      "imageUrl": "/products/beetles.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -203,7 +203,7 @@
       "weight": 1200,
       "name": "Maple Syrup",
       "category": "Sweet",
-      "imageUrl": "/products/potato.png",
+      "imageUrl": "/products/maple.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -220,7 +220,7 @@
       "weight": 1000,
       "name": "Olive Oil Dressing",
       "category": "Dressings",
-      "imageUrl": "/products/potato.png",
+      "imageUrl": "/products/oil.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -237,7 +237,7 @@
       "weight": 1000,
       "name": "Ginger",
       "category": "Spicy",
-      "imageUrl": "/products/lemon.png",
+      "imageUrl": "/products/ginger.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -254,7 +254,7 @@
       "weight": 500,
       "name": "Balsamic Vinegar",
       "category": "Dressings",
-      "imageUrl": "/products/tomato.png",
+      "imageUrl": "/products/balsamic.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -271,7 +271,7 @@
       "weight": 1500,
       "name": "Sweet Corn",
       "category": "Sweet",
-      "imageUrl": "/products/lemon.png",
+      "imageUrl": "/products/corn.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -288,7 +288,7 @@
       "weight": 1000,
       "name": "Radish",
       "category": "Roots",
-      "imageUrl": "/products/white-onion.png",
+      "imageUrl": "/products/radish.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -305,7 +305,7 @@
       "weight": 800,
       "name": "BBQ Sauce",
       "category": "Dressings",
-      "imageUrl": "/products/tomato.png",
+      "imageUrl": "/products/bbq.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -322,7 +322,7 @@
       "weight": 700,
       "name": "Sweet Potato",
       "category": "Roots",
-      "imageUrl": "/products/potato.png",
+      "imageUrl": "/products/sweet-potato.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -339,7 +339,7 @@
       "weight": 600,
       "name": "Green Chili",
       "category": "Spicy",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/green-chilli.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -356,7 +356,7 @@
       "weight": 750,
       "name": "Agave Syrup",
       "category": "Sweet",
-      "imageUrl": "/products/potato.png",
+      "imageUrl": "/products/agave.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -373,7 +373,7 @@
       "weight": 850,
       "name": "Hot Sauce",
       "category": "Spicy",
-      "imageUrl": "/products/tomato.png",
+      "imageUrl": "/products/hot-sauce.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -390,7 +390,7 @@
       "weight": 950,
       "name": "Tahini",
       "category": "Dressings",
-      "imageUrl": "/products/tomato.png",
+      "imageUrl": "/products/tahini.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -407,7 +407,7 @@
       "weight": 1000,
       "name": "Yam",
       "category": "Roots",
-      "imageUrl": "/products/lemon.png",
+      "imageUrl": "/products/yam.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -424,7 +424,7 @@
       "weight": 1200,
       "name": "Tomato",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/beetles.png",
+      "imageUrl": "/products/tomato.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -441,7 +441,7 @@
       "weight": 1300,
       "name": "Cucumber",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/cucumber.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -458,7 +458,7 @@
       "weight": 1500,
       "name": "Lettuce",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/lettuce.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -475,7 +475,7 @@
       "weight": 1000,
       "name": "Bell Pepper",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/garlic.png",
+      "imageUrl": "/products/bellpepper.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -492,7 +492,7 @@
       "weight": 800,
       "name": "Zucchini",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/garlic.png",
+      "imageUrl": "/products/zucchini.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -509,7 +509,7 @@
       "weight": 1100,
       "name": "Spinach",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/beetles.png",
+      "imageUrl": "/products/spinach.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -526,7 +526,7 @@
       "weight": 900,
       "name": "Broccoli",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/broccoli.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -543,7 +543,7 @@
       "weight": 700,
       "name": "Kale",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/kale.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -560,7 +560,7 @@
       "weight": 800,
       "name": "Asparagus",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/cucumber.png",
+      "imageUrl": "/products/asparagus.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
@@ -577,7 +577,7 @@
       "weight": 1400,
       "name": "Green Beans",
       "category": "Fresh Veggie",
-      "imageUrl": "/products/tomato.png",
+      "imageUrl": "/products/green-beans.webp",
       "metadata": {
         "unit": "g",
         "weight": 100,
