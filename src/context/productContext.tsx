@@ -15,7 +15,15 @@ interface ProductContextType {
   productList: Product[] | undefined;
   categoryList: string[] | undefined;
   groupedProducts: Record<string, Product[]> | undefined;
+  selectedProduct: selectedProductDataType | undefined;
   setProductList: () => Promise<void>;
+  setSelectedProduct: (data: selectedProductDataType) => void;
+}
+
+interface selectedProductDataType {
+  categoryIndex: number | undefined;
+  productIndex: number | undefined;
+  product: Product | undefined;
 }
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
@@ -34,6 +42,8 @@ export const ProductProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [groupedProducts, setGroupedProducts] = useState<
     Record<string, Product[]> | undefined
   >();
+  const [selectedProduct, setSelectedProduct] =
+    useState<selectedProductDataType>();
 
   const updateProductList = async (): Promise<void> => {
     const products = await getProducts();
@@ -58,6 +68,10 @@ export const ProductProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setGroupedProducts(grouped);
   };
 
+  const updateSelectedProduct = (data: selectedProductDataType) => {
+    setSelectedProduct(data);
+  };
+
   useEffect(() => {
     updateProductList();
   }, []);
@@ -68,7 +82,9 @@ export const ProductProvider: FC<{ children: ReactNode }> = ({ children }) => {
         productList,
         categoryList,
         groupedProducts,
+        selectedProduct,
         setProductList: updateProductList,
+        setSelectedProduct: updateSelectedProduct,
       }}
     >
       {children}
