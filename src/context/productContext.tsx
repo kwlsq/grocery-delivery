@@ -18,6 +18,8 @@ interface ProductContextType {
   selectedProduct: selectedProductDataType | undefined;
   setProductList: () => Promise<void>;
   setSelectedProduct: (data: selectedProductDataType) => void;
+  getNextProduct: () => void;
+  getPreviousProduct: () => void;
 }
 
 interface selectedProductDataType {
@@ -72,6 +74,80 @@ export const ProductProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setSelectedProduct(data);
   };
 
+  const getNextProduct = () => {
+    if (!groupedProducts || !categoryList || !selectedProduct || !selectedProduct.product) {
+      return;
+    }
+  
+    const currentCategoryItems = groupedProducts[selectedProduct.product?.category] || [];
+    const { productIndex, categoryIndex } = selectedProduct;
+  
+    if (productIndex === undefined || categoryIndex === undefined) {
+      return;
+    }
+  
+    if (productIndex + 1 < currentCategoryItems.length) {
+      setSelectedProduct({
+        categoryIndex,
+        productIndex: productIndex + 1,
+        product: currentCategoryItems[productIndex + 1],
+      });
+      return;
+    }
+  
+    const nextCategoryIndex = categoryIndex + 1;
+  
+    if (nextCategoryIndex < categoryList.length) {
+      const nextCategory = categoryList[nextCategoryIndex];
+      const nextCategoryItems = groupedProducts[nextCategory] || [];
+  
+      if (nextCategoryItems.length > 0) {
+        setSelectedProduct({
+          categoryIndex: nextCategoryIndex,
+          productIndex: 0,
+          product: nextCategoryItems[0],
+        });
+      }
+    }
+  };
+
+  const getPreviousProduct = () => {
+    if (!groupedProducts || !categoryList || !selectedProduct || !selectedProduct.product) {
+      return;
+    }
+  
+    const currentCategoryItems = groupedProducts[selectedProduct.product?.category] || [];
+    const { productIndex, categoryIndex } = selectedProduct;
+  
+    if (productIndex === undefined || categoryIndex === undefined) {
+      return;
+    }
+  
+    if (productIndex > 0) {
+      setSelectedProduct({
+        categoryIndex,
+        productIndex: productIndex - 1,
+        product: currentCategoryItems[productIndex - 1],
+      });
+      return;
+    }
+  
+    const prevCategoryIndex = categoryIndex - 1;
+  
+    if (prevCategoryIndex >= 0) {
+      const prevCategory = categoryList[prevCategoryIndex];
+      const prevCategoryItems = groupedProducts[prevCategory] || [];
+  
+      if (prevCategoryItems.length > 0) {
+        setSelectedProduct({
+          categoryIndex: prevCategoryIndex,
+          productIndex: prevCategoryItems.length - 1,
+          product: prevCategoryItems[prevCategoryItems.length - 1],
+        });
+      }
+    }
+  };
+
   useEffect(() => {
     updateProductList();
   }, []);
@@ -85,6 +161,8 @@ export const ProductProvider: FC<{ children: ReactNode }> = ({ children }) => {
         selectedProduct,
         setProductList: updateProductList,
         setSelectedProduct: updateSelectedProduct,
+        getNextProduct,
+        getPreviousProduct,
       }}
     >
       {children}

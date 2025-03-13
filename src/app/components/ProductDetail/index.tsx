@@ -6,7 +6,8 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 import Image from "next/image";
 
 const ProductDetail = () => {
-  const { selectedProduct } = useProductContext();
+  const { selectedProduct, getNextProduct, getPreviousProduct } =
+    useProductContext();
   return (
     <DrawerContent className="max-w-md mx-auto left-1/2 h-full">
       <DialogTitle className="hidden">Product Detail</DialogTitle>
@@ -17,6 +18,7 @@ const ProductDetail = () => {
           alt="arrow left icon"
           className="h-80 absolute left-0 top-[-1em]"
           src="/icons/ic-arrow-left.svg"
+          onClick={() => getPreviousProduct()}
         />
 
         <div className="flex justify-center items-center mt-5">
@@ -37,6 +39,7 @@ const ProductDetail = () => {
           alt="arrow right icon"
           className="h-80 scale-x-[-1] absolute right-0 top-[-1em]"
           src="/icons/ic-arrow-left.svg"
+          onClick={() => getNextProduct()}
         />
       </div>
       <div className="mx-4 flex flex-col gap-3">
