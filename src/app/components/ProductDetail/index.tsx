@@ -39,29 +39,41 @@ const ProductDetail = () => {
           src="/icons/ic-arrow-left.svg"
         />
       </div>
-      <div>{selectedProduct?.product?.name}</div>
-      <div>In 100 {selectedProduct?.product?.metadata.unit}</div>
-      <div className="flex gap-5">
-        <div>
-          <div>{selectedProduct?.product?.metadata.calorie}</div>
-          <div>calorie</div>
+      <div className="mx-4 flex flex-col gap-3">
+        <div className="font-bold text-3xl ">
+          {selectedProduct?.product?.name}
         </div>
-        <div>
-          <div>{selectedProduct?.product?.metadata.proteins}</div>
-          <div>proteins</div>
+        <div className="font-semibold ">
+          In 100 {selectedProduct?.product?.metadata.unit}
         </div>
-        <div>
-          <div>{selectedProduct?.product?.metadata.fats}</div>
-          <div>fats</div>
-        </div>
-        <div>
-          <div>{selectedProduct?.product?.metadata.carbs}</div>
-          <div>carbs</div>
+        <div className="flex gap-5 justify-around border border-black-1 rounded-xl py-2 px-4">
+          <div className="flex flex-col items-center">
+            <div className="font-semibold">
+              {selectedProduct?.product?.metadata.calorie}
+            </div>
+            <div className="text-sm opacity-40">calorie</div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="font-semibold">
+              {selectedProduct?.product?.metadata.proteins}
+            </div>
+            <div className="text-sm opacity-40">proteins</div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="font-semibold">
+              {selectedProduct?.product?.metadata.fats}
+            </div>
+            <div className="text-sm opacity-40">fats</div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="font-semibold">
+              {selectedProduct?.product?.metadata.carbs}
+            </div>
+            <div className="text-sm opacity-40">carbs</div>
+          </div>
         </div>
       </div>
-      <div>
-
-      </div>
+      <div></div>
     </DrawerContent>
   );
 };
