@@ -4,14 +4,10 @@ import { useProductContext } from "@/context/productContext";
 import ProductCard from "../ProductCard";
 import { useCategoryContext } from "@/context/categoryContext";
 import { Product } from "@/types/product";
-import { useCartContext } from "@/context/cartContext";
 
 const ProductDisplay = () => {
   const { groupedProducts, setSelectedProduct } = useProductContext();
   const { activeCategory } = useCategoryContext();
-  const { cart } = useCartContext();
-  console.log(groupedProducts);
-  console.log(cart);
 
   if (!groupedProducts) return <p>Loading...</p>;
 

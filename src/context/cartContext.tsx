@@ -1,7 +1,7 @@
 "use client";
 
-import { getCart } from "@/services/cartService";
-import { ProductCartMap } from "@/types/cart";
+import { getCart, addToCart, updateCartItem, removeFromCart } from "@/services/cartService";
+import { ProductCartMap, CartItem } from "@/types/cart";
 import {
   createContext,
   FC,
@@ -12,8 +12,10 @@ import {
 } from "react";
 
 interface CartContextType {
-  cart: ProductCartMap[] | undefined;
-  setCart: () => void;
+  cart: ProductCartMap | undefined;
+  addToCart: (data: CartItem) => Promise<void>;
+  updateCartItem: (productId: number, updatedData: Partial<CartItem>) => Promise<void>;
+  removeFromCart: (productId: number) => Promise<void>;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -27,7 +29,7 @@ export const useCartContext = () => {
 };
 
 export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [cart, setCart] = useState<ProductCartMap[] | undefined>();
+  const [cart, setCart] = useState<ProductCartMap | undefined>();
 
   const updateCart = async (): Promise<void> => {
     const cartItems = await getCart();
@@ -38,8 +40,30 @@ export const CartProvider: FC<{ children: ReactNode }> = ({ children }) => {
     updateCart();
   }, []);
 
+  const handleAddToCart = async (data: CartItem) => {
+    await addToCart(data);
+    updateCart(); 
+  };
+  
+  const handleUpdateCartItem = async (productId: number, updatedData: Partial<CartItem>) => {
+    await updateCartItem(productId, updatedData);
+    updateCart(); 
+  };
+
+  const handleRemoveFromCart = async (productId: number) => {
+    await removeFromCart(productId);
+    updateCart(); 
+  };
+
   return (
-    <CartContext.Provider value={{ cart, setCart: updateCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart: handleAddToCart,
+        updateCartItem: handleUpdateCartItem,
+        removeFromCart: handleRemoveFromCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
