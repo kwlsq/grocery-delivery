@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ProductProvider } from "@/context/productContext";
 import { CategoryProvider } from "@/context/categoryContext";
+import { CartProvider } from "@/context/cartContext";
 
 export const metadata: Metadata = {
   title: "Grocery Delivery",
@@ -17,9 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <ProductProvider>
         <CategoryProvider>
-          <body className="font-sf-pro-display flex justify-center bg-gray-100">
-            {children}
-          </body>
+          <CartProvider>
+            <body className="font-sf-pro-display flex justify-center bg-gray-100">
+              {children}
+            </body>
+          </CartProvider>
         </CategoryProvider>
       </ProductProvider>
     </html>
