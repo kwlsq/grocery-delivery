@@ -9,7 +9,7 @@ const ProductDetail = () => {
   const { selectedProduct, getNextProduct, getPreviousProduct } =
     useProductContext();
   return (
-    <DrawerContent className="max-w-md mx-auto left-1/2 h-full">
+    <DrawerContent data-cy="product-detail" className="max-w-md mx-auto left-1/2 h-full">
       <DialogTitle className="hidden">Product Detail</DialogTitle>
       <div className="flex justify-center items-start relative mb-9">
         <Image
